@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<button onclick="checkNum()">Button</button>
+</body>
+<script>
+    let checkPrime = 0;
+
+    function checkNum() {
+        let counter = +prompt("Nhập số N");
+        for (let i = 2; i < 20; i++) {
+            for (let j = 0; j <= i; j++) {
+                if (i % j === 0) {
+                    checkPrime++
+                }
+            }
+            if (checkPrime === 2) {
+                document.write(i + '<br>')
+            }
+            checkPrime = 0;
+            if (counter <= 0) {
+                break;
+            }
+        }
+    }
+
+
+
+</script>
+
+</html>
