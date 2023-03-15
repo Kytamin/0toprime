@@ -8,27 +8,23 @@
 <button onclick="checknum()">Button</button>
 </body>
 <script>
-    function checkSNT(number) {
-        if (number < 2) {
-            return false
-        }
-        for (i = 2; i < number - 1; i++) {
-            if (number % i === 0) {
-                return false
+    let checkprime=0
+    function checknum(){
+        let number=prompt("nhập vào số cần kiểm tra")
+        for (let i = 2; i <number; i++) {
+            for (let j = 0; j < i; j++) {
+                 if(i%i===0){
+                     checkprime++
+                 }
+            }
+            if (checkprime===2){
+                document.write(i+"<br>")
+            }
+            checkprime=0;
+            if (number<2){
+                break;
             }
         }
-        return true
-    }
-
-    let input = prompt("nhập vào số nguyên")
-    let N = 2
-    let count = 0
-    while (count < input) {
-        if (checkSNT(N)) {
-            document.write(`${N}` + "<br>")
-            count++
-        }
-        N++
     }
 
 </script>
