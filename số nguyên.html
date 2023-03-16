@@ -10,10 +10,10 @@
 <script>
     let checkprime=0
     function checknum(){
-        let number=prompt("nhập vào số cần kiểm tra")
-        for (let i = 2; i <number; i++) {
-            for (let j = 0; j < i; j++) {
-                 if(i%i===0){
+        let number=+prompt("nhập vào số cần kiểm tra")
+        for (let i = 2; i <=number; i++) {
+            for (let j = 0; j <= i; j++) {
+                 if(i%j===0){
                      checkprime++
                  }
             }
@@ -21,6 +21,7 @@
                 document.write(i+"<br>")
             }
             checkprime=0;
+
             if (number<2){
                 break;
             }
